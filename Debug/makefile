@@ -46,8 +46,8 @@ XbeeUartTest.bin \
 all: XbeeUartTest.elf secondary-outputs
 
 # Tool invocations
-XbeeUartTest.elf: $(OBJS) $(USER_OBJS) C:\Users\colto\Documents\Capstone\Code\STM32F103RBTX_FLASH.ld
-	arm-none-eabi-gcc -o "XbeeUartTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\colto\Documents\Capstone\Code\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="XbeeUartTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+XbeeUartTest.elf: $(OBJS) $(USER_OBJS) C:\Users\colto\Documents\Capstone\Code\Capstone\STM32F103RBTX_FLASH.ld
+	arm-none-eabi-gcc -o "XbeeUartTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\colto\Documents\Capstone\Code\Capstone\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="XbeeUartTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
